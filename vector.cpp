@@ -7,7 +7,7 @@ vector<T, Alloc>::vector() noexcept
 }
 
 template<typename T, class Alloc>
-vector<T, Alloc>::vector(const int& i) 
+vector<T, Alloc>::vector(const int& i ) 
 	: sz(i), cap(i + 2), ptr(traits::allocate(alloc, cap))
 {
 	for (size_t i = 0; i < sz; ++i)
