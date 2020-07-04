@@ -45,8 +45,6 @@ vector<T, Alloc>::~vector()
     traits::deallocate(alloc, ptr, cap);
 }
 
-////////////////////////////////////////
-//Operators
 
 template<typename T, class Alloc>
 vector<T>& vector<T, Alloc>::operator=(const vector<T>& lv)
