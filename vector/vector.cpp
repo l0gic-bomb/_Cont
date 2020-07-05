@@ -119,7 +119,7 @@ vector<T>& vector<T, Alloc>::operator+=(const vector<T>& lv)
 }
 
 template<typename T, class Alloc>
-T& vector<T, Alloc>::operator[](const int& i)
+const T& vector<T, Alloc>::operator[](const int& i) const
 {
     return ptr[i];
 }
@@ -210,24 +210,20 @@ void vector<T, Alloc>::pop_back()
 }
 
 template<typename T, class Alloc>
-bool vector<T, Alloc>::empty()
+bool vector<T, Alloc>::empty() const
 {
     return ((sz == 0) ? true : false);
 }
 
 template<typename T, class Alloc>
-size_t vector<T, Alloc>::sizes()
+size_t vector<T, Alloc>::sizes() const
 {
     return this-sz;
 }
 
 template<typename T, class Alloc>
-size_t vector<T, Alloc>::capacity()
+size_t vector<T, Alloc>::capacity() const
 {
     return this->cap;
 }
 
-
-/* Сделать Swap
- * Сделать реверс иттераторы
-*/
